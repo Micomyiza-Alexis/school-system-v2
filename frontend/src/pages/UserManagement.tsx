@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { LoaderCircle, Search, ShieldCheck, Users, GraduationCap, X, Check, Crown, Briefcase, HardDrive } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
-
+import type { ManagedSchoolRole, SchoolRole } from '@/types';
 type SchoolRole = 'dean_of_studies' | 'headteacher' | 'teacher' | 'it';
 type SchoolUser = { id: string; email: string; full_name: string; role: SchoolRole };
 type Assignment = { teacher_id: string; class_name: string };
