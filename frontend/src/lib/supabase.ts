@@ -23,12 +23,6 @@ const supabaseAnonKey = String(rawKey).trim();
 
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
-console.log("SUPABASE DEBUG", {
-  url: supabaseUrl,
-  keyPrefix: supabaseAnonKey.slice(0, 14),
-  configured: isSupabaseConfigured,
-});
-
 export const supabase = isSupabaseConfigured
   ? createClient(supabaseUrl, supabaseAnonKey, {
       auth: {
